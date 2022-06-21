@@ -20,23 +20,16 @@ toast.configure({
     });
 
 import Board from './components/Board';
+import hamburger from './img/R.png';
+import leftArrow from './img/T.png';
+    
 //controlled components
-
+    
 
 //controlling component
 class Game extends React.Component {
   constructor(props) {
     super(props);
-    // let a0 = [null, null, null, null, null, null, null, null];
-    // let a1 = [null, null, null, null, null, null, null, null];
-    // let a2 = [null, null, null, null, null, null, null, null];
-    // let a3 = [null, null, null, null, null, null, null, null];
-    // let a4 = [null, null, null, null, null, null, null, null];
-    // let a5 = [null, null, null, null, null, null, null, null];
-    // let a6 = [null, null, null, null, null, null, null, null];
-    // let a7 = [null, null, null, null, null, null, null, null];
-    // let hrr = [a0, a1, a2, a3, a4, a5, a6, a7];
-    //console.log('hrr',hrr)
     let hrr = new Array(8).fill(null).map(x=>Array(8).fill(null))
     hrr.push({ turn: "0", stateNumber: 0, underCheck: null,lastPieceMoved: null });
     //creating the multi dimentional array,
@@ -167,22 +160,13 @@ class Game extends React.Component {
       }
     }
     if (abr) {
-      let kking = squares[8].turn == 1 ? "Black" : "White"
-      let winner = (kking == "0K") ? "White" : "Black"
-      toast("game over, winner is " + winner)
+      let kking = squares[8].turn != 1 ? "Black" : "White"
+    //   let winner = (kking == "0K") ? "White" : "Black"
+      toast("game over, winner is " + kking)
     }
   }
 
   Reset() {
-    // let a0 = [null, null, null, null, null, null, null, null];
-    // let a1 = [null, null, null, null, null, null, null, null];
-    // let a2 = [null, null, null, null, null, null, null, null];
-    // let a3 = [null, null, null, null, null, null, null, null];
-    // let a4 = [null, null, null, null, null, null, null, null];
-    // let a5 = [null, null, null, null, null, null, null, null];
-    // let a6 = [null, null, null, null, null, null, null, null];
-    // let a7 = [null, null, null, null, null, null, null, null];
-    // let hrr = [a0, a1, a2, a3, a4, a5, a6, a7];
     let hrr = new Array(8).fill(null).map(x=>Array(8).fill(null))
     hrr.push({ turn: "0", stateNumber: 0, underCheck: null, lastPieceMoved: null });
     let state = {
@@ -273,9 +257,7 @@ class Game extends React.Component {
     //arr.push('4')
     let t = brr[this.state.current].squares[8].turn == 0 ? "whites" : "Blacks";
 
-    let hamburger = 'https://th.bing.com/th/id/R.05c6931e4c4d7d956ed1783747326129?rik=Nx8ITJ647BVK%2bA&riu=http%3a%2f%2fimage.flaticon.com%2ficons%2fpng%2f512%2f52%2f52045.png&ehk=GJDEwltLs8%2bpYAnCuZvycZ76tvjwl2s2J8GVWtdc2ms%3d&risl=&pid=ImgRaw&r=0';
     
-    let leftArrow = 'https://pixsector.com/cache/81183b13/avcc910c4ee5888b858fe.png';
     return (
       <div className="game">
         <div className="game-board">
@@ -299,9 +281,9 @@ class Game extends React.Component {
           let k = document.querySelector(".game-info");
           k.classList.toggle("inactive")
           let k2 = document.querySelector(".github");
-          k2.classList.toggle("inactive")
+          k2?.classList.toggle("inactive")
           let k3 = document.querySelector(".github2");
-          k3.classList.toggle("inactive");
+          k3?.classList.toggle("inactive");
         }}>
           <img className='iClass' src={hamburger} alt='more'></img>
         </div>
@@ -317,18 +299,12 @@ class Game extends React.Component {
 
 export default Game;
 
-/////////////////////////////////////////////////////////////////////
-//game specific functions
-///////////////////////////////////////////////////////////////////////
-/////////////////////////////////////////////////////////////////////
-//game specific functions
-///////////////////////////////////////////////////////////////////////
-/////////////////////////////////////////////////////////////////////
-//game specific functions
-///////////////////////////////////////////////////////////////////////
-/////////////////////////////////////////////////////////////////////
-//game specific functions
-///////////////////////////////////////////////////////////////////////
+
+//! game specific functions
+//! game specific functions
+//! game specific functions
+//! game specific functions
+
 function mark(trr, squares) {
 
   for (var j of trr) {
