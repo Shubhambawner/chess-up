@@ -1,7 +1,7 @@
 import ReactDOM from 'react-dom';
 import React from 'react';
 import { createRoot } from 'react-dom/client';
-  
+
 
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -15,18 +15,18 @@ import Game from './Game';
 
 
 
-  let w = window.innerWidth;
-  if (w > 630 && w < 780) {
+let w = window.innerWidth;
+if (w > 630 && w < 780) {
     window.alert("game supported for standard mobile/desktop view, for current device being used, game is under construction");
-  }if(w<=630){
+} if (w <= 630) {
     window.alert("this site uses some advance UI properties, so it may produce lag on small screens, please switch to desktop for best experience. or, move to alternate site: https://chess-up.netlify.app/")
-  }
+}
 
 
-  // ========================================
-  const container = document.getElementById('root');
-  const root = createRoot(container); // createRoot(container!) if you use TypeScript
-  root.render(<Game/>);
+// ========================================
+const container = document.getElementById('root');
+const root = createRoot(container); // createRoot(container!) if you use TypeScript
+root.render(<Game />);
 /*
 the localstorage is used to store the game state,so that reload dosnt make it lost.
 
