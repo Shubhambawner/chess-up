@@ -1,4 +1,6 @@
 import React from 'react';
+import { memo } from "react";
+
 import util from '../util';
 
 class Square extends React.Component {
@@ -6,6 +8,17 @@ class Square extends React.Component {
     #x = this.props.value[1];
     #y = this.props.value[2];
     #color = (this.#x + this.#y) % 2 == 0 ? "whiteSquare" : "blackSquare";
+
+    shouldComponentUpdate(nextProps) {
+        // Rendering the component only if 
+        // passed props value is changed
+      
+        if (JSON.stringify(nextProps) !== JSON.stringify(this.props)) {
+          return true;
+        } else {
+          return false;
+        }
+      }
   
   
     render() {
@@ -26,4 +39,7 @@ class Square extends React.Component {
       );
     }
   }
+
+//   const MemSquare = memo(Square)
+// export default MemSquare;  
 export default Square;  

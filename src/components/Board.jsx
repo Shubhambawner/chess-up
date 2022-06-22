@@ -1,19 +1,28 @@
 import React from 'react';
+import { memo } from "react";
 
 import Square from './Square';
 
 
 class Board extends React.Component {
+    handleClick = (i,j) => {this.props.onClick(i, j);console.log('11')}
     renderSquare(i, j) {
       //console.log(i,j,this.props.squares[i][j])
       return (
         <Square
           key={i * 10 + j}
           value={[this.props.squares[i][j], i, j]}
-          onClick={() => this.props.onClick(i, j)}
+          onClick={this.handleClick.bind(this,i,j)}
         />
       );
     }
+
+    // shouldComponentUpdate(nextProps) {
+    //     // Rendering the component only if 
+    //     // passed props value is changed
+      
+    //     return false;
+    //   }
   
     render() {
       //console.log("hello", this.props.squares);
@@ -34,4 +43,8 @@ class Board extends React.Component {
       return <div id="sadsad">{brr}</div>;
     }
   }
+
+//   Board = memo(Board)
 export default Board;  
+
+// export default MemoBoard;  
