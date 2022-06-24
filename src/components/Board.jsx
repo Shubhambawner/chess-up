@@ -5,14 +5,15 @@ import Square from './Square';
 
 
 class Board extends React.Component {
-    handleClick = (i,j) => {this.props.onClick(i, j);console.log('11')}
     renderSquare(i, j) {
       //console.log(i,j,this.props.squares[i][j])
+      
       return (
         <Square
           key={i * 10 + j}
+          Data={this.props.Data}
           value={[this.props.squares[i][j], i, j]}
-          onClick={this.handleClick.bind(this,i,j)}
+          marked={this.props.marked.indexOf(i + "" + j) >= 0}
         />
       );
     }

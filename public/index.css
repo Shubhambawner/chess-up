@@ -99,11 +99,18 @@
     justify-content: space-around;
       flex-direction: column;
       justify-content: space-around;
-      height: 90vh;
+      height: 100vh;
       max-height: 100vh;
       position: fixed;
       right: 0px;
-      top: 6vh;
+      
+    background: #f0f8ff61;
+    backdrop-filter: blur(10px);
+    z-index: 2;
+  }
+
+  .card {
+    z-index: 3;
   }
   
   .green-mark{
@@ -186,7 +193,7 @@
       backdrop-filter: blur(16px) saturate(180%);
       -webkit-backdrop-filter: blur(16px) saturate(180%);
       background-color: rgb(54 54 54 / 62%);
-      color: aliceblue;
+      color: rgb(31, 47, 61);
       display: flex;
       flex-direction: row;
       align-items: center
@@ -258,14 +265,10 @@
   }
   .github2{
     position: fixed;
-      height: 7vh;
-      width: 10vh;
-      bottom: 1vh;
-      right: 1vh;
-      margin: 0;
-      padding: 0;
-      left: auto;
-      top: auto;
+    height: 7vh;
+    width: 7vh;
+    bottom: 1vh;
+    right: 0vw;
   }
   /*/////////////////////media queries begin////////////////////////*/
   /*/////////////////////media queries begin////////////////////////*/
@@ -295,6 +298,7 @@
     
    }
   
+   /*tablet version*/
    @media screen and (max-width: 635px){
     .blackSquare{
       width: 11vw;
@@ -332,17 +336,21 @@
     }
   
     .github2 {
-      position: fixed;
-      height: 6vh;
-      width: 6vh;
-      bottom: 1vh;
-      right: 1vh;
-      margin: 0;
-      padding: 0;
-      left: auto;
-      top: auto;
+        position: fixed;
+        height: 7vh;
+        width: 7vh;
+        bottom: 1vh;
+        right: -1vw;
+      
   }
-    
+  .game-info{
+    backdrop-filter:none;
+    height: 90vh;
+    top:6vh;
+}
+.button-card{
+    color: azure;
+}
     #reset{
       position: fixed;
       top: 2vh;
@@ -410,15 +418,4 @@
   }
   .iClass{
     height: 100%;
-  }
-  .github2 {
-    position: fixed;
-    height: 6vh;
-    width: 6vh;
-    bottom: 1vh;
-    right: 1vh;
-    margin: 0;
-    padding: 0;
-    left: auto;
-    top: auto;
   }

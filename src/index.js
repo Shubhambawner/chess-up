@@ -6,23 +6,21 @@ import { createRoot } from 'react-dom/client';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-import Game from './Game';
+import Game from './components/Game';
 //controlled components
 
 
 //controlling component
 
 
-
-
-let w = window.innerWidth;
+let initCheck = ()=>{let w = window.innerWidth;
 if (w > 630 && w < 780) {
-    window.alert("game supported for standard mobile/desktop view, for current device being used, game is under construction");
+    window.alert("game supported for standard mobile/desktop view, for current device being used, game is under construction ");
 } if (w <= 630) {
     window.alert("this site uses some advance UI properties, so it may produce lag on small screens, please switch to desktop for best experience. or, move to alternate site: https://chess-up.netlify.app/")
-}
+}}
 
-
+initCheck()
 // ========================================
 const container = document.getElementById('root');
 const root = createRoot(container); // createRoot(container!) if you use TypeScript
