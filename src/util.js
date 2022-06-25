@@ -38,15 +38,15 @@ function movePieceTo(i, j, tsquares, ib, jb, realMove = true) { //realMove is a 
     //special pawn moves :
     if (squares[ib][jb][1] == 'p') {
         //if there is en passed n process hapening
-        if (ValueOf(j) != ValueOf(jb) && squares[i][j] == null) {
+        if (parseInt(j) != parseInt(jb) && squares[i][j] == null) {
             squares[ib][j] = null;
         }
         //piece promotion
-        if (squares[ib][jb][0] == '0' && ValueOf(i) == 7) {
+        if (squares[ib][jb][0] == '0' && parseInt(i) == 7) {
             if (realMove) toast(`The Pawn is promoted to the Queen!`);
             squares[ib][jb] = '0q';
         }
-        if (squares[ib][jb][0] == '1' && ValueOf(i) == 0) {
+        if (squares[ib][jb][0] == '1' && parseInt(i) == 0) {
             if (realMove) toast(`The Pawn is promoted to the Queen!`);
             squares[ib][jb] = '1q';
         }
@@ -54,7 +54,7 @@ function movePieceTo(i, j, tsquares, ib, jb, realMove = true) { //realMove is a 
     //normal piece moving from ib,jb to i,j
     squares[i][j] = squares[ib][jb];
     squares[ib][jb] = null;
-   // console.log('*********************6666666666666***********************', ValueOf(i), ValueOf(ib), ValueOf(i) != ValueOf(ib));
+   // console.log('*********************6666666666666***********************', parseInt(i), parseInt(ib), parseInt(i) != parseInt(ib));
     return squares;
 }
 
@@ -89,8 +89,8 @@ function isUnderCheck(cking, i, j, squares, toLog) {
 
 //range without considering piece pinn or check
 function getRoughRange(ii, jj, p, squares, previousSQ) {
-    let i = ValueOf(ii)
-    let j = ValueOf(jj)
+    let i = parseInt(ii)
+    let j = parseInt(jj)
     //console.log(i,j,p,squares)
     let arr = [];
     if (p == "p") {
@@ -113,8 +113,8 @@ function getRoughRange(ii, jj, p, squares, previousSQ) {
 }
 
 function getRange(ii, jj, p, squares, previousSQ) {
-    let i = ValueOf(ii)
-    let j = ValueOf(jj)
+    let i = parseInt(ii)
+    let j = parseInt(jj)
     //console.log(i,j,p,squares)
     let arr = getRoughRange(i, j, p, squares, previousSQ);
     let brr = [];
@@ -402,10 +402,7 @@ function Vr(i, j, squares) {
 function mapURL(str) {
     return pieceURL[str];
 }
-//simple string to int converter
-function ValueOf(i) {
-    return parseInt(i)
-}
+
 //recursively checks iff 2 objects are actually equal
 
 

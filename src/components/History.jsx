@@ -21,7 +21,7 @@ class ListItem extends React.Component {
     render(){
         return(
             <li key={this.props.listData.id+Date.now()}>
-                        <button className="button-card" id="current">{this.props.listData.desc}
+                        <button className="button-card" id="current" onClick={this.props.onClick}>{this.props.listData.desc}
                             <img className="fit2" src={mapURL(this.props.listData.piece)}></img></button>
                     </li>
         )
@@ -80,7 +80,7 @@ class History extends React.Component {
 
             return (
                 
-                <ListItem key={listData.id} listData={listData}/>
+                <ListItem key={listData.id} listData={listData} onClick={()=>this.props.methods.jumpTo(listData.id)}/>
             );
         });
 

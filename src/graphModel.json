@@ -1,0 +1,27 @@
+{
+    "matrix":[8x8],
+    "currentNode":"id",
+    "nodeTree":{}
+}
+
+"node":{
+    "id":"timestamp",
+    "player_0_move":{
+        "from":"11",
+        "to":"13",
+        "piece":"0p",
+        "time":123321,
+        "type":"",//"real" or "virtual"
+    },
+    "player_1_move":{
+        "from":"11",
+        "to":"13",
+        "piece":"0p",
+        "time":123321,
+        "type":"",//"real" or "virtual"
+    },
+    "state":"",//"win" or "lose" or "draw" or "continue" or "pending"
+    "next":[]//list of immediate next nodes
+}
+
+
