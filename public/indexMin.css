@@ -147,7 +147,7 @@
   }
   
   .blackSquare{
-    background : #8bc34a5b;
+    background : #4c8327;
     border: 1px solid #999;
     float: left;
     font-size: 24px;
@@ -367,7 +367,7 @@
       top: 2vh;
       right: 6vw;
       border-radius: 4px 15px 4px 4px;
-      
+      color: rgb(27, 27, 46);
     }
     #scrollbull{
       display: flex;

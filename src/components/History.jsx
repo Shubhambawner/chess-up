@@ -21,7 +21,7 @@ class ListItem extends React.Component {
     render(){
         return(
             <li key={this.props.listData.id+Date.now()}>
-                        <button className="current-card button-card" id="current">{this.props.listData.desc}
+                        <button className="button-card" id="current">{this.props.listData.desc}
                             <img className="fit2" src={mapURL(this.props.listData.piece)}></img></button>
                     </li>
         )
