@@ -18,8 +18,9 @@ class Square extends React.Component {
 
         let m = JSON.parse(JSON.stringify(nextProps));
 
-        m.lastActivePiece = this.props.Data.lastActivePiece;
+        m.Data.lastActivePiece = this.props.Data.lastActivePiece;
 
+       
         if (JSON.stringify(m) !== JSON.stringify(this.props)) {
            console.log("rendering square: ", this.#x + "" + this.#y, JSON.stringify(m), JSON.stringify(this.props))
 

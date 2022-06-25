@@ -3,7 +3,30 @@ import {mapURL} from '../util'
 import hamburger from '../img/R.png';
 import leftArrow from '../img/T.png';
 
-
+class ListItem extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+        }
+    }
+    shouldComponentUpdate(nextProps) {
+        // Rendering the component only if
+        // passed props value is changed
+        if (JSON.stringify(nextProps) !== JSON.stringify(this.props)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+    render(){
+        return(
+            <li key={this.props.listData.id+Date.now()}>
+                        <button className="current-card button-card" id="current">{this.props.listData.desc}
+                            <img className="fit2" src={mapURL(this.props.listData.piece)}></img></button>
+                    </li>
+        )
+    }
+}
 class History extends React.Component {
     constructor(props) {
         super(props);
@@ -49,11 +72,15 @@ class History extends React.Component {
                 );
             }
 
+            let listData={
+                desc:desc,
+                piece:j.squares[8].lastPieceMoved,
+                id:i
+            }
+
             return (
-                <li key={i}>
-                    <button className="button-card" onClick={() => this.props.methods.jumpTo(i)}>{desc}
-                        <img className="fit2" src={mapURL(j.squares[8].lastPieceMoved)}></img></button>
-                </li>
+                
+                <ListItem key={listData.id} listData={listData}/>
             );
         });
 
