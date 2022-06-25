@@ -101,7 +101,6 @@ class Game extends React.Component {
 
     markPieces(i, j) {
         let squares = JSON.parse(JSON.stringify(this.state.H[this.state.current].squares));
-        let abr = false;
         let previousSQ = null;
         if (this.state.current > 0) {
             previousSQ = JSON.parse(JSON.stringify(this.state.H[this.state.current - 1].squares));
@@ -131,7 +130,6 @@ class Game extends React.Component {
         let oponentKing = squares[8].turn == 0 ? "1K" : "0K";
         let king = squares[8].turn == 0 ? "0K" : "1K";
 
-        console.log(isUnderCheck(king, i, j, squares, true))
         if (isUnderCheck(king, i, j, squares)) {
             toast("the piece is pin! "); //handled in getRange!!!
         } else {
