@@ -103,7 +103,7 @@ class History extends React.Component {
                     </a>
                 </div>
 
-                <div style={{zIndex:3}}  className={this.state.isVisible?"github2 inactive":"github2"}  >
+                <div style={{zIndex:3, cursor:"pointer"}}  className={this.state.isVisible?"github2 inactive":"github2"}  >
                     <div style={{width: `100%`,height: `100%`,    display: `flex`,
     justifyContent: 'center',
     alignItems: 'center'}} onClick={()=>this.getIframe()}>
