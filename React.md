@@ -23,3 +23,6 @@ a. memo API: to avoid re-rendering
 b. context API: to avoid repetative props passing 
 c. ref API: to controll DOM elements/ class based components
 d. lazy + suspend : 
+
+3. client side rendering
+a. create react app uses webpack

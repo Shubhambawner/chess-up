@@ -1,5 +1,7 @@
 ## General:
 1. React ensures that for each user-initiated event like a click or a keypress, the DOM is fully updated before the next event.
+2. adding images into JSX componts: in client side rendering, we have to inport images like other JSX components, then use them in src attr of img tag.
+-> then while sending to client, the app is compressed to webpack, and there the images are included as import statements are seen.
 
 ## Hooks: 
 1. 2 rules: https://reactjs.org/docs/hooks-rules.html 
