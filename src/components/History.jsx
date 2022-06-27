@@ -97,18 +97,18 @@ class History extends React.Component {
                 
                 <div style={{zIndex:3}} className={this.state.isVisible?"github inactive":"github"} >
                     <a style={{width: "100%",height: "100%"}} href="https://github.com/Shubhambawner/learner/tree/main/Dev/REACT/Chess-up">
-                        <img style={{width: "95%",height: "95%"}} src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Github-desktop-logo-symbol.svg/128px-Github-desktop-logo-symbol.svg.png" alt="" ></img>
+                        <img style={{width: "95%",height: "95%"}} src="../img/png/githubLogo.png" alt="My github handle" ></img>
                     </a>
                 </div>
 
                 <div style={{zIndex:3}}  className={this.state.isVisible?"github2 inactive":"github2"}  >
                     <div style={{width: `100%`,height: `100%`,    display: `flex`,
     justifyContent: 'center',
-    alignItems: 'center'}} onClick={()=>getIframe()}>
+    alignItems: 'center'}} onClick={()=>this.getIframe()}>
                         <img style={{height: "65%",
       width: "65%",
       position: "relative",
-      top: "0.8vh"}} src="https://cdn3.iconfinder.com/data/icons/ecommerce-mix/1024/program-512.png" alt="" ></img>
+      top: "0.8vh"}} src="../img/png/codeBlock.png" alt="" ></img>
                     </div>
                 </div>
     

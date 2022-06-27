@@ -1,0 +1,15 @@
+{
+    "short_name": "chess-up",
+    "name": "2 player chess: simple react project",
+    "icons": [
+        {
+            "src": "./logo.svg",
+            "type": "image/svg+xml"
+        }
+    ],
+    "start_url": "/index.html",
+    "background_color": "#3367D6",
+    "display": "standalone",
+    "scope": "/app/",
+    "theme_color": "#3367D6"
+}
