@@ -2,6 +2,8 @@ import React from "react";
 import {mapURL} from '../util'
 import hamburger from '../img/R.png';
 import leftArrow from '../img/T.png';
+import githubLogo from '../img/png/githubLogo.png';
+import codeBlock from '../img/png/codeBlock.png';
 
 class ListItem extends React.Component {
     constructor(props) {
@@ -97,7 +99,7 @@ class History extends React.Component {
                 
                 <div style={{zIndex:3}} className={this.state.isVisible?"github inactive":"github"} >
                     <a style={{width: "100%",height: "100%"}} href="https://github.com/Shubhambawner/learner/tree/main/Dev/REACT/Chess-up">
-                        <img style={{width: "95%",height: "95%"}} src="../img/png/githubLogo.png" alt="My github handle" ></img>
+                        <img style={{width: "95%",height: "95%"}} src={githubLogo} alt="My github handle" ></img>
                     </a>
                 </div>
 
@@ -108,7 +110,7 @@ class History extends React.Component {
                         <img style={{height: "65%",
       width: "65%",
       position: "relative",
-      top: "0.8vh"}} src="../img/png/codeBlock.png" alt="" ></img>
+      top: "0.8vh"}} src={codeBlock} alt="copy iframe" ></img>
                     </div>
                 </div>
     
