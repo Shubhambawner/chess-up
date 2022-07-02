@@ -2,7 +2,6 @@ import ReactDOM from 'react-dom';
 import React from 'react';
 import { createRoot } from 'react-dom/client';
 
-import { GameErrorboundry } from '../Errorboundry';
 import { mapURL, chessStart, getRange, isUnderCheck, movePieceTo, canKingMove } from '../util'
 
 import { toast } from 'react-toastify';
@@ -198,7 +197,7 @@ class Game extends React.Component {
 
         return (
             <div className="game">
-                <GameErrorboundry >
+                
                     <div className="game-board">
                         <Board
                             squares={brr[this.state.current].squares}
@@ -207,7 +206,6 @@ class Game extends React.Component {
                         />
                     </div>
                     <History gameData={gameData} methods={{ jumpTo: this.jumpTo.bind(this), Reset: this.Reset.bind(this) }} />
-                </GameErrorboundry>
             </div>
         );
     }

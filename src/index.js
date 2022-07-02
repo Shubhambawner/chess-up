@@ -6,6 +6,7 @@ import { createRoot } from 'react-dom/client';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
+import { GameErrorboundry } from './Errorboundry';
 import Game from './components/Game';
 //controlled components
 
@@ -24,7 +25,7 @@ initCheck()
 // ========================================
 const container = document.getElementById('root');
 const root = createRoot(container); // createRoot(container!) if you use TypeScript
-root.render(<Game />);
+root.render(<GameErrorboundry ><Game /></GameErrorboundry>);
 /*
 the localstorage is used to store the game state,so that reload dosnt make it lost.
 

@@ -11,13 +11,15 @@ export class GameErrorboundry extends React.Component {
     }
 
     componentDidCatch(error, info) {
-        console.error(error);
+        console.log(error);
+        this.setState({ hasError: true });
     }
 
     render() {
         if (this.state.hasError) {
             localStorage.removeItem('chess');
-            alert(`Something went wrong. We will have to reset the game 😢😒`)
+            alert(`Something went wrong in the Game. \nWe will have to reset the game 😢😒`);
+            window.location.reload();
             return this.props.children ;
         }
         return this.props.children;
