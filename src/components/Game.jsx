@@ -2,7 +2,8 @@ import ReactDOM from 'react-dom';
 import React from 'react';
 import { createRoot } from 'react-dom/client';
 
-import { mapURL, chessStart, getRange, isUnderCheck, movePieceTo ,canKingMove} from '../util'
+import { GameErrorboundry } from '../Errorboundry';
+import { mapURL, chessStart, getRange, isUnderCheck, movePieceTo, canKingMove } from '../util'
 
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -197,16 +198,16 @@ class Game extends React.Component {
 
         return (
             <div className="game">
-                <div className="game-board">
-
-                    <Board
-                        squares={brr[this.state.current].squares}
-                        marked={this.state.marked}
-                        Data={Data}
-                    />
-                </div>
-
-                <History gameData={gameData} methods={{ jumpTo: this.jumpTo.bind(this), Reset: this.Reset.bind(this) }} />
+                <GameErrorboundry >
+                    <div className="game-board">
+                        <Board
+                            squares={brr[this.state.current].squares}
+                            marked={this.state.marked}
+                            Data={Data}
+                        />
+                    </div>
+                    <History gameData={gameData} methods={{ jumpTo: this.jumpTo.bind(this), Reset: this.Reset.bind(this) }} />
+                </GameErrorboundry>
             </div>
         );
     }
