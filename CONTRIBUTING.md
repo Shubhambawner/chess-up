@@ -1,8 +1,9 @@
 _Disclaimer! This is a project for fun! I do not expect a professional or high standards for free. 
 
 
-## what is needed :
+## what is needed : CSS enhancement
 this project has few precise requirements to be fullfiled via opensource, so its here, and those are:
+* Systematise the styling, currently all the css lies in one single huge file, which is not good for further developement and maintainance. 
 * Styling: add mobile friendly styling to the project
 * will be soon added
 
