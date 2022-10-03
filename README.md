@@ -9,3 +9,4 @@ TODO in this file :
 * add a workflow model, 
 * any other data that better describes and helps understanding of this project to new commers.
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/0dc80812-a545-442f-9a4b-97ecd78d5737/deploy-status)](https://app.netlify.com/sites/chess-up/deploys)
