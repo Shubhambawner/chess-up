@@ -1,421 +1,455 @@
 #scrollbull::-webkit-scrollbar {
-    width: 0px;                                     /* a. width of the entire scrollbar */
-    margin: 300px;
-  }
-  .game-info::-webkit-scrollbar {
-    width: 0px;                                     /* a. width of the entire scrollbar */
-    margin: 300px;
-  }
-  
-  button:focus{
-    outline: none;
-    border: none;
-    background-color: #1900ff1c;
-  }
-  
-  *{
-    margin: 0;
-    padding: 0;
-    transition-duration: 500ms;font-family: system-ui;
-  }
-  
-  body {
-    font: 14px "Century Gothic", Futura, sans-serif;
-    
-  }
-  
-  html{
-    scroll-behavior: smooth;
-  }
-  
-  ol, ul {
-    
-    padding-left: 30px;
-      list-style-type: none;
-      max-height: 85%;
-      overflow-y: auto;
-      display: flex;
-      flex-direction: column-reverse;
-      align-items: center;
-      padding-inline-start: 0;
-  }
-  
-  .game-board{
-      display: flex;
-      flex-direction: row-reverse;
-      margin: 1vh;
-      max-height: 100vh;
-      position: fixed;
-      top: 0px;
-      left: 0px;
-  }
-  
-  .board-row:after {
-    clear: both;
-    content: "";
-    display: table;
-  }
-  
-  .status {
-    margin-bottom: 10px;
-  }
-  
-  .square {
-    background: #fff;
-    border: 1px solid #999;
-    float: left;
-    font-size: 24px;
-    font-weight: bold;
-    line-height: 34px;
-    height: 34px;
-    margin-right: -1px;
-    margin-top: -1px;
-    padding: 0;
-    text-align: center;
-    width: 34px;
-  }
-  
-  
-  
-  .kbd-navigation .square:focus {
-    background: #ddd;
-  }
-  
-  .game {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    background: url('https://images6.alphacoders.com/470/470093.png') no-repeat center center fixed;
-    background-size: cover;
-    width: 100vw;
-      height: 100vh;
-  }
-  /*
+  width: 0px;
+  /* a. width of the entire scrollbar */
+  margin: 300px;
+}
+
+.game-info::-webkit-scrollbar {
+  width: 0px;
+  /* a. width of the entire scrollbar */
+  margin: 300px;
+}
+
+button:focus {
+  outline: none;
+  border: none;
+  background-color: #1900ff1c;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  transition-duration: 500ms;
+  font-family: system-ui;
+}
+
+body {
+  font: 14px "Century Gothic", Futura, sans-serif;
+
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+ol,
+ul {
+
+  padding-left: 30px;
+  list-style-type: none;
+  max-height: 85%;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  padding-inline-start: 0;
+}
+
+.game-board {
+  display: flex;
+  flex-direction: row-reverse;
+  margin: 1vh;
+  max-height: 100vh;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+}
+
+.board-row:after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.status {
+  margin-bottom: 10px;
+}
+
+.square {
+  background: #fff;
+  border: 1px solid #999;
+  float: left;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 34px;
+  height: 34px;
+  margin-right: -1px;
+  margin-top: -1px;
+  padding: 0;
+  text-align: center;
+  width: 34px;
+}
+
+
+
+.kbd-navigation .square:focus {
+  background: #ddd;
+}
+
+.game {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background: url('https://images6.alphacoders.com/470/470093.png') no-repeat center center fixed;
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+}
+
+/*
   https://images7.alphacoders.com/790/790762.jpg
   */
-  .game-info {
-    
+.game-info {
+
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100vh;
+  max-height: 100vh;
+  position: fixed;
+  right: 0px;
+
+  background: #f0f8ff61;
+  backdrop-filter: blur(10px);
+  z-index: 2;
+}
+
+.card {
+  z-index: 3;
+}
+
+.green-mark {
+  box-shadow: inset 1px 1px 12px 0px rgb(49 240 77 / 77%);
+}
+
+.red-mark {
+  box-shadow: inset 1px 1px 12px 0px rgb(240 49 49);
+}
+
+.blue-mark {
+  box-shadow: inset 1px 1px 12px 0px rgb(49 50 240);
+}
+
+.whiteSquare {
+  background: #f9febe4d;
+
+  border: 1px solid #999;
+  float: left;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 34px;
+  height: 12vh;
+  margin-right: -1px;
+  margin-top: -1px;
+  padding: 0;
+  text-align: center;
+  width: 12vh;
+  color: #fff0;
+
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+
+}
+
+.blackSquare {
+  background: #8bc34a5b;
+  border: 1px solid #999;
+  float: left;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 34px;
+  height: 12vh;
+  margin-right: -1px;
+  margin-top: -1px;
+  padding: 0;
+  text-align: center;
+  width: 12vh;
+  color: #fff0;
+
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+
+}
+
+.fit {
+  height: 100%;
+  color: #fff0;
+}
+
+.card {
+  width: 250px;
+  box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+  text-align: center;
+  margin: 2vh;
+  padding: 3vh;
+  border-radius: 3vh;
+  background: #ffffff59;
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  /*background-color: rgb(255 255 255 / 12%);;*/
+}
+
+.button-card {
+  box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+  text-align: center;
+  margin: 2vh;
+  padding: 0 1vw;
+  border-radius: 3vh;
+  background: rgba(240, 255, 255, 0);
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  background-color: rgb(54 54 54 / 62%);
+  color: rgb(31, 47, 61);
+  display: flex;
+  flex-direction: row;
+  align-items: center
+}
+
+.button-card:hover {
+  background-color: #d7ecff;
+  color: black;
+  ;
+}
+
+.button-card:active {
+  background-color: royalblue;
+}
+
+#sadsad {
+  box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+  border-radius: 20px;
+  padding: 1vw;
+  background: #ffffff59;
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+}
+
+.c00 {
+  border-radius: 20px 0 0 0;
+}
+
+.c07 {
+  border-radius: 0 20px 0 0;
+}
+
+.c70 {
+  border-radius: 0 0 0 20px;
+}
+
+.c77 {
+  border-radius: 0 0 20px 0;
+}
+
+.current-card {
+  background: #d7ecff56;
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  background-color: rgb(255 255 255 / 12%);
+
+}
+
+#reset {
+  background: #ff000054;
+}
+
+.glass {
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  background-color: rgb(255 255 255 / 12%);
+  ;
+}
+
+.togle {
+  display: none;
+  /*Glassmorphism*/
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  background-color: rgb(255 255 255 / 56%);
+  ;
+}
+
+.fit2 {
+  height: 5vw;
+  max-height: 30px;
+}
+
+.github {
+  position: fixed;
+  height: 7vh;
+  width: 7vh;
+  bottom: 8vh;
+  right: 0vw;
+}
+
+.github2 {
+  position: fixed;
+  height: 7vh;
+  width: 7vh;
+  bottom: 1vh;
+  right: 0vw;
+}
+
+/*/////////////////////media queries begin////////////////////////*/
+/*/////////////////////media queries begin////////////////////////*/
+/*/////////////////////media queries begin////////////////////////*/
+/*/////////////////////media queries begin////////////////////////*/
+/*/////////////////////media queries begin////////////////////////*/
+/*/////////////////////media queries begin////////////////////////*/
+
+@media screen and (max-width: 1080px) {
+  .card {
+    width: auto;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .game {
     display: flex;
+    flex-direction: column;
     justify-content: space-around;
-      flex-direction: column;
-      justify-content: space-around;
-      height: 100vh;
-      max-height: 100vh;
-      position: fixed;
-      right: 0px;
-      
-    background: #f0f8ff61;
-    backdrop-filter: blur(10px);
-    z-index: 2;
+    align-items: center;
+  }
+
+  .inactive {
+    right: -30vw;
+  }
+
+  .togle {
+    display: block;
+  }
+
+}
+
+/*tablet version*/
+@media screen and (max-width: 635px) {
+  .blackSquare {
+    width: 11vw;
+    height: 11vw;
+  }
+
+  .whiteSquare {
+    width: 11vw;
+    height: 11vw;
+  }
+
+  #sadsad {
+    padding: 2vw;
+    padding-top: 15vw;
+  }
+
+  .game-board {
+    position: relative;
+  }
+
+  .inactive {
+    display: flex;
+    position: inherit;
+  }
+
+  .togle {
+    display: none;
   }
 
   .card {
-    z-index: 3;
+    width: auto;
+    position: absolute;
+    top: 0px;
+    left: 4vw;
+    margin: 2vh 10px;
+    padding: 2vw;
+    box-shadow: 0 6px 7px 0px rgb(0 0 0 / 19%);
+    font-size: 5vw;
   }
-  
-  .green-mark{
-    box-shadow: inset 1px 1px 12px 0px rgb(49 240 77 / 77%);
-  }
-  
-  .red-mark{
-        box-shadow: inset 1px 1px 12px 0px rgb(240 49 49);
-  }
-   
-  .blue-mark{
-        box-shadow: inset 1px 1px 12px 0px rgb(49 50 240);
-  }
-   
-  .whiteSquare{
-    background :#f9febe4d;
-      
-    border: 1px solid #999;
-    float: left;
-    font-size: 24px;
-    font-weight: bold;
-    line-height: 34px;
-    height: 12vh;
-    margin-right: -1px;
-    margin-top: -1px;
-    padding: 0;
-    text-align: center;
-    width: 12vh;
-    color: #fff0;
-  
-    backdrop-filter: blur(16px) saturate(180%);
-      -webkit-backdrop-filter: blur(16px) saturate(180%);
-    
-  }
-  
-  .blackSquare{
-    background : #8bc34a5b;
-    border: 1px solid #999;
-    float: left;
-    font-size: 24px;
-    font-weight: bold;
-    line-height: 34px;
-    height: 12vh;
-    margin-right: -1px;
-    margin-top: -1px;
-    padding: 0;
-    text-align: center;
-    width: 12vh;
-    color: #fff0;
-  
-    backdrop-filter: blur(16px) saturate(180%);
-      -webkit-backdrop-filter: blur(16px) saturate(180%);
-    
-  }
-  .fit{
-    height:100%;
-    color:#fff0;
-  }
-  
-  .card{
-    width: 250px;
-      box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
-      text-align: center;
-      margin: 2vh;
-      padding: 3vh;
-      border-radius: 3vh;
-      background: #ffffff59;
-      backdrop-filter: blur(16px) saturate(180%);
-      -webkit-backdrop-filter: blur(16px) saturate(180%);
-      /*background-color: rgb(255 255 255 / 12%);;*/
-  }
-  
-  .button-card{
-    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
-      text-align: center;
-      margin: 2vh;
-      padding: 0 1vw;
-      border-radius: 3vh;
-      background: rgba(240, 255, 255, 0);
-      backdrop-filter: blur(16px) saturate(180%);
-      -webkit-backdrop-filter: blur(16px) saturate(180%);
-      background-color: rgb(54 54 54 / 62%);
-      color: rgb(31, 47, 61);
-      display: flex;
-      flex-direction: row;
-      align-items: center
-  }
-  .button-card:hover{
-    background-color: #d7ecff;
-    color: black;;
-  }
-  .button-card:active{
-    background-color: royalblue;
-  }
-  
-  #sadsad{
-    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
-      border-radius: 20px;
-      padding: 1vw;
-      background: #ffffff59;
-      backdrop-filter: blur(16px) saturate(180%);
-      -webkit-backdrop-filter: blur(16px) saturate(180%);
-  }
-  
-  .c00{
-    border-radius: 20px 0 0 0;
-  }
-  .c07{
-    border-radius: 0 20px 0 0;
-  }
-  .c70{
-    border-radius:0 0 0 20px;
-  }
-  .c77{
-    border-radius:   0 0 20px 0;
-  }
-  
-  .current-card{
-    background: #d7ecff56;
-    backdrop-filter: blur(16px) saturate(180%);
-      -webkit-backdrop-filter: blur(16px) saturate(180%);
-      background-color: rgb(255 255 255 / 12%);
-      
-  }
-  #reset{
-    background: #ff000054;
-  }
-  .glass{
-    backdrop-filter: blur(16px) saturate(180%);
-      -webkit-backdrop-filter: blur(16px) saturate(180%);
-      background-color: rgb(255 255 255 / 12%);;
-  }
-  .togle{
-    display: none;
-    /*Glassmorphism*/
-    backdrop-filter: blur(16px) saturate(180%);
-      -webkit-backdrop-filter: blur(16px) saturate(180%);
-      background-color: rgb(255 255 255 / 56%);;
-  }
-  
-  .fit2{
-    height: 5vw;
-      max-height: 30px;
-  }
-  
-  .github{
-    position: fixed;
-      height: 7vh;
-      width: 7vh;
-      bottom: 8vh;
-      right: 0vw;
-  }
-  .github2{
+
+  .github2 {
     position: fixed;
     height: 7vh;
     width: 7vh;
     bottom: 1vh;
-    right: 0vw;
+    right: -1vw;
+
   }
-  /*/////////////////////media queries begin////////////////////////*/
-  /*/////////////////////media queries begin////////////////////////*/
-  /*/////////////////////media queries begin////////////////////////*/
-  /*/////////////////////media queries begin////////////////////////*/
-  /*/////////////////////media queries begin////////////////////////*/
-  /*/////////////////////media queries begin////////////////////////*/
-  
-  @media screen and (max-width: 1080px){
-   .card{
-    width: auto;
-   }
-  }
-  @media screen and (max-width: 960px){
-    .game{
-      display: flex;
-      flex-direction: column;
-      justify-content: space-around;
-      align-items: center;
-    }
-    .inactive{
-      right: -30vw;
-    }
-    .togle{
-      display: block;
-    }
-    
-   }
-  
-   /*tablet version*/
-   @media screen and (max-width: 635px){
-    .blackSquare{
-      width: 11vw;
-      height: 11vw;
-    }
-    .whiteSquare{
-      width: 11vw;
-      height: 11vw;
-    }
-  
-    #sadsad{
-      padding: 2vw;
-      padding-top: 15vw;
-    }
-    .game-board{
-      position: relative;
-    }
-    
-    .inactive{
-      display: flex;
-      position: inherit;
-    }
-    .togle{
-      display: none;
-    }
-    .card{
-      width: auto;
-      position: absolute;
-      top: 0px;
-      left: 4vw;
-      margin: 2vh 10px;
-      padding: 2vw;
-      box-shadow: 0 6px 7px 0px rgb(0 0 0 / 19%);
-      font-size: 5vw;
-    }
-  
-    .github2 {
-        position: fixed;
-        height: 7vh;
-        width: 7vh;
-        bottom: 1vh;
-        right: -1vw;
-      
-  }
-  .game-info{
-    backdrop-filter:none;
+
+  .game-info {
+    backdrop-filter: none;
     height: 90vh;
-    top:6vh;
-}
-.button-card{
+    top: 6vh;
+  }
+
+  .button-card {
     color: azure;
+  }
+
+  #reset {
+    position: fixed;
+    top: 2vh;
+    right: 40vw;
+    background: #ff000054;
+  }
+
+  .button-card {
+    margin: 3px 3px 0 0;
+    border-radius: 4px;
+    font-size: 4vw;
+  }
+
+  .current-card {
+    position: fixed;
+    top: 2vh;
+    right: 6vw;
+    border-radius: 4px 15px 4px 4px;
+
+  }
+
+  #scrollbull {
+    display: flex;
+    width: 100vw;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    position: fixed;
+    top: 105vw;
+    left: 0px;
+    padding: 0px;
+    margin: 2.5vw;
+    width: 95vw;
+    height: calc(99vh - 100vw);
+    overflow: scroll;
+    align-content: flex-start;
+  }
+
 }
-    #reset{
-      position: fixed;
-      top: 2vh;
-      right: 40vw;
-      background: #ff000054;
-    }
-    .button-card{
-      margin: 3px 3px 0 0;
-      border-radius: 4px;
-      font-size: 4vw;
-    }
-    .current-card{
-      position: fixed;
-      top: 2vh;
-      right: 6vw;
-      border-radius: 4px 15px 4px 4px;
-      
-    }
-    #scrollbull{
-      display: flex;
-      width: 100vw;
-      flex-wrap: wrap;
-      flex-direction: row;
-      justify-content: center;
-      position: fixed;
-      top: 105vw;
-      left: 0px;
-      padding: 0px;
-      margin: 2.5vw;
-      width: 95vw;
-      height: calc(99vh - 100vw);
-      overflow: scroll;
-      align-content: flex-start;
-    }
-  
-   }
-  
-   @media screen and (max-width: 960px){
-    .game{
-      display: flex;
-      flex-direction: column;
-      justify-content: space-around;
-      align-items: center;
-      height: 100vh;
-      overflow: hidden;
-    }
-   }
-  
-   
-  
-   @media screen and (max-width: 340px){
-    #reset{
-      position: inherit;
-    }
-     
-   }
-  
-   .togle{
-    width: 1rem;
-      height: 1rem;
-      position: fixed;
-      top: 0px;
-      right: 0px;
-      padding: 0.5rem;
+
+@media screen and (max-width: 960px) {
+  .game {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
   }
-  .iClass{
-    height: 100%;
+}
+
+
+
+@media screen and (max-width: 340px) {
+  #reset {
+    position: inherit;
   }
+
+}
+
+.togle {
+  width: 1rem;
+  height: 1rem;
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  padding: 0.5rem;
+}
+
+.iClass {
+  height: 100%;
+}

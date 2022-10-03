@@ -161,7 +161,7 @@ class Game extends React.Component {
             this.#range = [];
         }
 
-        //??
+        //?? need some enhansment, dom apis are never to be used like this !
         let fg = document.getElementById("current");
         if (fg) {
             fg.scrollIntoView({ behavior: "smooth" });
